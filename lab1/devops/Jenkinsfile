@@ -3,6 +3,9 @@ node{
     stage('init'){
         echo 'Hello World lab1'
     }
+    stage("checkout"){
+        echo "descargar source github"
+        sh 'printenv'
+    }
     
 }
-  
