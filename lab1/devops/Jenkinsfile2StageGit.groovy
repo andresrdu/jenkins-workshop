@@ -4,19 +4,24 @@ node{
         stage("init"){
             echo "${ENV_CLIENTID}"
             sh 'printenv'
+            cleanWs()
         }
     }
 
     stage("checkout"){
         println '=======TODO========'
         
-        git(
-            branch : "master",
-            credentialsId: "andresrdu-github",
-            url:"https://github.com/andresrdu/aks-rbac-example"
-        )
-
-        sh "ls -lta"
+        sh "mkdir source"
+        dir("source") {
+            git(
+                branch : "master",
+                credentialsId: "andresrdu-github",
+                url:"https://github.com/andresrdu/aks-rbac-example"
+            )
+        }
+        
+        sh "pwd"
+        sh "ls -lta && cd source && ls -lta"
 
 
     }
