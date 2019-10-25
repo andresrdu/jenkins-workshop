@@ -12,7 +12,7 @@ node{
             tok2 = tokentmp[1]
             tok3 = tokentmp[2]
 
-            echo "${tok1} ${tok2} ${tok3}"
+            echo "${tok1} ---- ${tok2} ---- ${tok3}"
         }
     }
 }
