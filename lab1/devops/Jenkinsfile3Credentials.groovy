@@ -1,7 +1,7 @@
 
 node{
     stage("init"){
-        s
+        sh "ls -lta"
     }
     stage("checkout"){
         withCredentials([string(credentialsId:"andresrdu-token",variable:'token1')]){
