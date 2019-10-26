@@ -23,12 +23,12 @@ node{
 //terraform init
 //terraform apply
 //terraform -version
-/*
-    stage("deploy"){
-        docker.image("hashicorp/terraform:0.12.12").withRun("-version"){
-            container -> sh "docker logs ${container.id}"
-        }
-    }
+
+    // stage("deploy"){
+    //     docker.image("hashicorp/terraform:0.12.12").withRun("-version"){
+    //         container -> sh "docker logs ${container.id}"
+    //     }
+    // }
 }
 
 
