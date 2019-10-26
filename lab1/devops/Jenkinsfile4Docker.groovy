@@ -13,6 +13,10 @@ node{
             tok3 = tokentmp[2]
 
             echo "${tok1} ---- ${tok2} ---- ${tok3}"
+            echo "${tok1} ---- ${tok2} ---- ${tok3} >> archivo.txt"
+
+            sh "ls -lart;pwd;cat archivo.txt"
+            
         }
     }
 // docker run -it <name image>:tag terraform -version
