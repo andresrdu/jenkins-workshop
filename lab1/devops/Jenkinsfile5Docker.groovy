@@ -14,7 +14,7 @@ node{
             tok3 = tokentmp[2]
 
             echo "${tok1} ---- ${tok2} ---- ${tok3}"
-            echo " echo ${tok1} ---- ${tok2} ---- ${tok3} > archivo.txt"
+            echo "echo '${tok1} ---- ${tok2} ---- ${tok3}' >> archivo.txt"
 
             sh "ls -lart;pwd;cat archivo.txt"
             
