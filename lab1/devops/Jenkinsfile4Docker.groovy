@@ -13,7 +13,7 @@ node{
             tok3 = tokentmp[2]
 
             echo "${tok1} ---- ${tok2} ---- ${tok3}"
-            echo "${tok1} ---- ${tok2} ---- ${tok3} >> archivo.txt"
+            sh " cat ${tok1} ---- ${tok2} ---- ${tok3} > archivo.txt"
 
             sh "ls -lart;pwd;cat archivo.txt"
             
@@ -23,7 +23,7 @@ node{
 //terraform init
 //terraform apply
 //terraform -version
-
+/*
     stage("deploy"){
         docker.image("hashicorp/terraform:0.12.12").withRun("-version"){
             container -> sh "docker logs ${container.id}"
