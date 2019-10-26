@@ -6,27 +6,27 @@ node{
     }
     stage("checkout"){
         withCredentials([string(credentialsId:"andresrdu-token1",variable:'token1')]){
-            echo "${token1}"
+            echo "andresrdu-token1 variable ${token1}"
 
             tokentmp = token1.split('\\|')
             tok11 = tokentmp[0]
             tok12 = tokentmp[1]
 
-            echo "${tok11} ---- ${tok12}"
-            sh "echo '${tok11} ---- ${tok12}' >> token1.txt"
+            echo "andresrdu-token1 array ${tok11} ---- ${tok12}"
+            sh "echo 'andresrdu-token1 ${tok11} ---- ${tok12}' >> token1.txt"
 
             sh "ls -lart;pwd;cat token1.txt"
             
         }
         withCredentials([string(credentialsId:"andresrdu-token2",variable:'token2')]){
-            echo "${token2}"
+            echo "andresrdu-token2 variable ${token2}"
 
             tokentmp2 = token2.split('\\|')
             tok21 = tokentmp2[0]
             tok22 = tokentmp2[1]
 
-            echo "${tok21} ---- ${tok22}"
-            sh "echo '${tok21} ---- ${tok22}' >> token2.txt"
+            echo "andresrdu-token2 array ${tok21} ---- ${tok22}"
+            sh "echo 'andresrdu-token2 ${tok21} ---- ${tok22}' >> token2.txt"
 
             sh "ls -lart;pwd;cat token2.txt"
             
